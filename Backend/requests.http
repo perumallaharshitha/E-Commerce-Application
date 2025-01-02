@@ -1,0 +1,67 @@
+### User API - Fetch all users
+GET http://localhost:4000/user-api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhdGhhIiwiaWF0IjoxNzM1ODI2ODgyLCJleHAiOjE3MzU4MzA0ODJ9.RDP-l5lNX31t1TpUw7Fi_p3nhIgmyMYJVrMGkdIb0eA
+
+### User API - Fetch specific user (e.g., 'latha')
+GET http://localhost:4000/user-api/users/latha
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhdGhhIiwiaWF0IjoxNzM1ODI2ODgyLCJleHAiOjE3MzU4MzA0ODJ9.RDP-l5lNX31t1TpUw7Fi_p3nhIgmyMYJVrMGkdIb0eA
+
+### User API - Create new user
+POST http://localhost:4000/user-api/user
+Content-Type: application/json
+
+{
+    "fullname": "bhanu",
+    "username": "latha",
+    "password": "bhanu",
+    "email": "harshithaperumalla23@gmail.com",
+    "products": []
+}
+
+### User API - Login and Get JWT Token
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "username": "latha",
+    "password": "bhanu"
+}
+
+### User API - Update user
+PUT http://localhost:4000/user-api/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhdGhhIiwiaWF0IjoxNzM1ODI2ODgyLCJleHAiOjE3MzU4MzA0ODJ9.RDP-l5lNX31t1TpUw7Fi_p3nhIgmyMYJVrMGkdIb0eA
+
+{
+    "fullname": "madhu sarma",
+    "username": "madhu",
+    "password": "madhu",
+    "email": "harshithaperumalla23@gmail.com"
+}
+
+### User API - Delete user
+DELETE http://localhost:4000/user-api/user/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhdGhhIiwiaWF0IjoxNzM1ODI2ODgyLCJleHAiOjE3MzU4MzA0ODJ9.RDP-l5lNX31t1TpUw7Fi_p3nhIgmyMYJVrMGkdIb0eA
+
+### Product API - Get all products
+### GET all products from the product API
+get http://localhost:4000/product-api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhdGhhIiwiaWF0IjoxNzM1ODI2ODgyLCJleHAiOjE3MzU4MzA0ODJ9.RDP-l5lNX31t1TpUw7Fi_p3nhIgmyMYJVrMGkdIb0eA
+
+
+### Product API - Get a product by ID (example product ID 31)
+GET http://localhost:4000/product-api/products/id-30
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhdGhhIiwiaWF0IjoxNzM1ODI2ODgyLCJleHAiOjE3MzU4MzA0ODJ9.RDP-l5lNX31t1TpUw7Fi_p3nhIgmyMYJVrMGkdIb0eA
+
+### Product API - Add product to cart (for a user)
+PUT http://localhost:4000/user-api/add-to-cart/ravi
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhdGhhIiwiaWF0IjoxNzM1ODI2ODgyLCJleHAiOjE3MzU4MzA0ODJ9.RDP-l5lNX31t1TpUw7Fi_p3nhIgmyMYJVrMGkdIb0eA
+
+{
+    "id": 2,
+    "title": "test",
+    "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+    "category": "beauty",
+    "price": 9.99
+}
