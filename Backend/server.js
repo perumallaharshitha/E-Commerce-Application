@@ -49,6 +49,10 @@ app.use("/user-api", userApp);
 //if path starts with /user-api, forward req to userApp
 app.use("/product-api", productApp);
 
+
+app.get('/',(req,res)=>{
+  res.send("Server is running")
+})
 //handling invalid path
 app.use('*',(req,res,next)=>{
   console.log(req.path)
