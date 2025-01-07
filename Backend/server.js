@@ -6,9 +6,10 @@ const app = exp();
 const cors=require('cors');
 // https://e-commerce-app-mu-eight.vercel.app
 app.use(cors({
-  origin:"*"
-}))
-
+  origin: 'https://e-commerce-app-mu-eight.vercel.app',  // Your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 require('dotenv').config() //process.env.SECRET_KEY
 
 //import MongoClient
