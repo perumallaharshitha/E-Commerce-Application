@@ -12,7 +12,7 @@ function Cart() {
   // Get latest cart
   async function getUserCart() {
     if (currentUser) {
-      let res = await fetch(`http://localhost:4000/user-api/cart/${currentUser.username}`);
+      let res = await fetch(`https://e-commerce-application-7iv1zxxd4-p-harshithas-projects.vercel.app/user-api/cart/${currentUser.username}`);
       let data = await res.json();
       setCart(data.payload.products);
     }
@@ -24,7 +24,7 @@ function Cart() {
 
   // Delete product from cart
   async function deleteProduct(productId) {
-    let res = await fetch(`http://localhost:4000/user-cart/${productId}`, {
+    let res = await fetch(`https://e-commerce-application-7iv1zxxd4-p-harshithas-projects.vercel.app/user-cart/${productId}`, {
       method: "DELETE",
     });
     console.log(res);

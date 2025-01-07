@@ -13,7 +13,7 @@ function UserLoginStore({ children }) {
   async function loginUser(userCred) {
     try {
       let res = await fetch(
-        'http://localhost:4000/user-api/login',
+        'https://e-commerce-application-7iv1zxxd4-p-harshithas-projects.vercel.app/user-api/login',
         {
           method: "POST",
           headers: { "Content-type": "application/json" ,},

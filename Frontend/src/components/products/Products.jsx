@@ -6,7 +6,7 @@ function Products() {
 
   async function getProducts() {
     try {
-      const response = await fetch('http://localhost:4000/product-api/products');
+      const response = await fetch('https://e-commerce-application-7iv1zxxd4-p-harshithas-projects.vercel.app/product-api/products');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

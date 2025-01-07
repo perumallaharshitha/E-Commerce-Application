@@ -11,7 +11,7 @@ function Product({ productObj }) {
     console.log(productObj);
     // Add current user data to productObj
     let username = currentUser.username;
-    let res = await fetch(`http://localhost:4000/user-api/add-to-cart/${username}`, {
+    let res = await fetch(`https://e-commerce-application-7iv1zxxd4-p-harshithas-projects.vercel.app/user-api/add-to-cart/${username}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(productObj)

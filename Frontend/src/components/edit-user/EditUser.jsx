@@ -11,7 +11,7 @@ function EditUser() {
   //save modified user after edit
     async function onSave(modifiedUser){
         console.log(modifiedUser)
-        let res = await fetch('http://localhost:4000/user-api/user', {
+        let res = await fetch('https://e-commerce-application-7iv1zxxd4-p-harshithas-projects.vercel.app/user-api/user', {
             method: "PUT",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(modifiedUser),
