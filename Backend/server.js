@@ -4,8 +4,8 @@ const exp = require("express");
 const app = exp();
 
 const cors=require('cors');
+// https://e-commerce-app-mu-eight.vercel.app
 app.use(cors({
-  // https://e-commerce-app-mu-eight.vercel.app
   origin:"*"
 }))
 
