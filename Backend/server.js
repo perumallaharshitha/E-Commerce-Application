@@ -5,7 +5,8 @@ const app = exp();
 
 const cors=require('cors');
 app.use(cors({
-  origin:'https://e-commerce-app-mu-eight.vercel.app'
+  // https://e-commerce-app-mu-eight.vercel.app
+  origin:"*"
 }))
 
 require('dotenv').config() //process.env.SECRET_KEY
