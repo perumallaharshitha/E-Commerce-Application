@@ -6,7 +6,7 @@ const app = exp();
 const cors=require('cors');
 // https://e-commerce-app-mu-eight.vercel.app
 app.use(cors({
-  origin: 'https://e-commerce-app-mu-eight.vercel.app',  // Your frontend URL
+  origin: 'https://e-commerce-app-mu-eight.vercel.app',  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
